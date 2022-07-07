@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "1004246404131",
+    "project_id": "techinterviews",
+    "storage_bucket": "techinterviews.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004246404131:android:fce4eebb7c6e43ede37596",
+        "android_client_info": {
+          "package_name": "com.example.fire_task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004246404131-gnrv3v940on8jl648efs3s3jp0icnpfv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCE0patUiaXJAyzKmJ10-Nls0fq9vqwBI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1004246404131-gnrv3v940on8jl648efs3s3jp0icnpfv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1004246404131-6uls0r56tm1jugo3oiln4a7as59gdq8q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.yatek"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004246404131:android:678a95c0a944fa5be37596",
+        "android_client_info": {
+          "package_name": "com.example.yatek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004246404131-gnrv3v940on8jl648efs3s3jp0icnpfv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCE0patUiaXJAyzKmJ10-Nls0fq9vqwBI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1004246404131-gnrv3v940on8jl648efs3s3jp0icnpfv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1004246404131-6uls0r56tm1jugo3oiln4a7as59gdq8q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.yatek"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
