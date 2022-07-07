@@ -5,7 +5,14 @@ import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MaterialApp(home: Login()));
+  try {
+    await Firebase.initializeApp();
+  } catch (e) {}
+  runApp(const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyHomePage(
+        title: '',
+      )));
 }
 
 class MyHomePage extends StatefulWidget {
@@ -20,6 +27,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Login();
   }
 }

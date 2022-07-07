@@ -5,5 +5,5 @@ returnLogo(context) {
   double screenHeight = MediaQuery.of(context).size.height;
 
   return Image.asset("assets/yatek_logo.png",
-      fit: BoxFit.cover, height: screenHeight * 0.1, width: screenWidth * 0.7);
+      fit: BoxFit.cover, height: screenHeight * 0.08, width: screenWidth * 0.5);
 }

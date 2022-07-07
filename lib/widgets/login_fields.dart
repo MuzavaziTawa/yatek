@@ -17,8 +17,6 @@ Widget emailField(context, controller) {
     child: TextFormField(
       textAlign: TextAlign.center,
       keyboardType: TextInputType.emailAddress,
-      obscureText: true,
-      obscuringCharacter: "*",
       controller: controller,
       cursorWidth: 1,
       maxLength: 200,

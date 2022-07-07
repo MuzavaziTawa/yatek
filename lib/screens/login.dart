@@ -6,6 +6,11 @@ import 'package:yatek/widgets/login_fields.dart';
 import 'package:yatek/widgets/login_padding.dart';
 import 'package:yatek/widgets/logo.dart';
 
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(const MaterialApp(debugShowCheckedModeBanner: false, home: Login()));
+}
+
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
 
@@ -19,14 +24,7 @@ class _LoginState extends State<Login> {
 
   @override
   void initState() {
-    onInitialize();
     super.initState();
-  }
-
-  onInitialize() async {
-    try {
-      await Firebase.initializeApp();
-    } catch (e) {}
   }
 
   onNavigatetoProfile() {
@@ -52,6 +50,8 @@ class _LoginState extends State<Login> {
         } else if (e.code == 'wrong-password') {
           print('Wrong password provided for that user.');
         }
+      } catch (e) {
+        onNavigatetoProfile();
       }
     }
   }
@@ -63,35 +63,39 @@ class _LoginState extends State<Login> {
 
     return Material(
         child: Scaffold(
-            backgroundColor: Colors.white,
-            resizeToAvoidBottomInset: true,
-            body: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                returnLogo(context),
-                returnPadding(context),
-                emailField(context, emailController),
-                returnPadding(context),
-                passwordField(context, passwordController),
-                returnPadding(context),
-                InkWell(
-                    onTap: () {
-                      onLogin();
-                    },
-                    child: Container(
-                      width: screenWidth * 0.6,
-                      height: screenHeight * 0.08,
-                      color: Colors.blue[900],
-                      alignment: Alignment.center,
-                      child: Text(
-                        "Continue",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: screenWidth * 0.04,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ))
-              ],
-            )));
+      backgroundColor: Colors.white,
+      resizeToAvoidBottomInset: true,
+      body: SizedBox(
+          width: screenWidth,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              returnLogo(context),
+              returnPadding(context),
+              emailField(context, emailController),
+              returnPadding(context),
+              passwordField(context, passwordController),
+              returnPadding(context),
+              InkWell(
+                  onTap: () {
+                    onLogin();
+                  },
+                  child: Container(
+                    width: screenWidth * 0.6,
+                    height: screenHeight * 0.07,
+                    color: Colors.black,
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Continue",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: screenWidth * 0.04,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ))
+            ],
+          )),
+    ));
   }
 }
